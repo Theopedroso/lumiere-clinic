@@ -1,41 +1,38 @@
-const menuToggle = document.getElementById("menuToggle");
-const menu = document.getElementById("menu");
-const form = document.getElementById("contactForm");
-const formMessage = document.getElementById("formMessage");
+:::writing{variant=“standard” id=“61003”}
+/* CURSOR PREMIUM */
+const cursor = document.querySelector(”.cursor”);
 
-if (menuToggle && menu) {
-  menuToggle.addEventListener("click", () => {
-    menu.classList.toggle("active");
-  });
+document.addEventListener(“mousemove”, (e) => {
+cursor.style.left = e.clientX + “px”;
+cursor.style.top = e.clientY + “px”;
+});
 
-  document.querySelectorAll(".menu a").forEach((link) => {
-    link.addEventListener("click", () => {
-      menu.classList.remove("active");
-    });
-  });
+/* BEFORE AFTER DRAG */
+const overlay = document.getElementById(“overlay”);
+const divider = document.getElementById(“divider”);
+
+document.addEventListener(“mousemove”, (e) => {
+const width = window.innerWidth;
+let x = e.clientX;
+
+overlay.style.clipPath = inset(0 ${100 - (x/width)*100}% 0 0);
+divider.style.left = x + “px”;
+});
+
+/* SCROLL ANIMATION */
+const sections = document.querySelectorAll(”.section”);
+
+window.addEventListener(“scroll”, () => {
+sections.forEach(sec => {
+if (sec.getBoundingClientRect().top < window.innerHeight - 100) {
+sec.classList.add(“show”);
 }
+});
+});
 
-const revealElements = document.querySelectorAll(".reveal");
-
-const revealOnScroll = () => {
-  const trigger = window.innerHeight * 0.88;
-
-  revealElements.forEach((element) => {
-    const top = element.getBoundingClientRect().top;
-
-    if (top < trigger) {
-      element.classList.add("visible");
-    }
-  });
-};
-
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
-
-if (form) {
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    formMessage.textContent = "Solicitação enviada com sucesso.";
-    form.reset();
-  });
-}
+/* HEADER SMART */
+window.addEventListener(“scroll”, () => {
+document.querySelector(”.header”).style.background =
+window.scrollY > 50 ? “rgba(0,0,0,0.8)” : “transparent”;
+});
+:::
