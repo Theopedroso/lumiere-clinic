@@ -4,159 +4,101 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SEU NOME | Estética Avançada</title>
+<title>Lumière Clinic | Estética Avançada</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
+<div class="cursor"></div>
+
 <header class="header">
   <div class="container nav">
-
-    <div class="logo">SEU<span>NOME</span></div>
+    <div class="logo">Lumière</div>
 
     <nav class="menu">
       <a href="#inicio">Início</a>
       <a href="#tratamentos">Tratamentos</a>
-      <a href="#sobre">Sobre</a>
+      <a href="#resultados">Resultados</a>
       <a href="#contato">Contato</a>
     </nav>
 
-    <a href="#contato" class="btn-primary">Agendar</a>
-
+    <a href="#contato" class="btn">Agendar</a>
   </div>
 </header>
 
-<main>
-
-<!-- HERO -->
 <section class="hero" id="inicio">
-  <div class="overlay"></div>
+  <div class="hero-bg"></div>
 
   <div class="container hero-content">
-
     <span class="tag">ESTÉTICA AVANÇADA</span>
 
-    <h1>
-      Beleza com naturalidade<br>
-      e precisão estética
-    </h1>
+    <h1>Beleza com precisão<br>e sofisticação</h1>
 
-    <p>
-      Procedimentos modernos focados em resultados naturais,
-      com segurança, técnica e sofisticação.
-    </p>
+    <p>Procedimentos premium focados em naturalidade e resultado.</p>
 
-    <a href="https://wa.me/5544991212105" class="btn-primary">
-      Agendar pelo WhatsApp
-    </a>
-
+    <a href="#contato" class="btn-main">Agendar avaliação</a>
   </div>
 </section>
 
-<!-- TRATAMENTOS -->
 <section class="section" id="tratamentos">
   <div class="container">
-
-    <h2>Tratamentos</h2>
+    <h2 class="title">Tratamentos</h2>
 
     <div class="grid">
 
       <div class="card">
-        <h3>Harmonização Facial</h3>
-        <p>Equilíbrio e definição com naturalidade.</p>
+        <h3>Harmonização</h3>
+        <p>Equilíbrio facial natural.</p>
       </div>
 
       <div class="card">
         <h3>Botox</h3>
-        <p>Suavização de linhas com leveza.</p>
+        <p>Suavização refinada.</p>
       </div>
 
       <div class="card">
         <h3>Preenchimento</h3>
-        <p>Proporção e estrutura facial refinada.</p>
+        <p>Estrutura e proporção.</p>
       </div>
 
       <div class="card">
         <h3>Skin Care</h3>
-        <p>Tratamentos para qualidade da pele.</p>
+        <p>Revitalização da pele.</p>
       </div>
 
     </div>
-
   </div>
 </section>
 
-<!-- SOBRE -->
-<section class="section dark" id="sobre">
-  <div class="container about">
-
-    <div>
-      <h2>Excelência em estética</h2>
-      <p>
-        Atendimento personalizado, técnicas modernas e foco em resultados naturais.
-        Cada procedimento é planejado de forma individual.
-      </p>
-    </div>
-
-    <div class="box">
-      <span>Atendimento exclusivo</span>
-      <span>Ambiente premium</span>
-      <span>Profissionais qualificados</span>
-    </div>
-
-  </div>
-</section>
-
-<!-- DEPOIMENTOS -->
-<section class="section">
+<section class="section dark" id="resultados">
   <div class="container">
 
-    <h2>Depoimentos</h2>
+    <h2 class="title">Resultados reais</h2>
 
-    <div class="grid">
+    <div class="compare">
 
-      <div class="card">
-        <p>“Resultado natural e impecável.”</p>
-      </div>
+      <img src="https://images.unsplash.com/photo-1588776814546-ec7e3c9f7c67">
+      <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03" id="overlay">
 
-      <div class="card">
-        <p>“Atendimento extremamente profissional.”</p>
-      </div>
-
-      <div class="card">
-        <p>“Experiência incrível do início ao fim.”</p>
-      </div>
+      <div class="divider" id="divider"></div>
 
     </div>
 
   </div>
 </section>
 
-<!-- CTA FINAL -->
 <section class="section contact" id="contato">
   <div class="container center">
-
     <h2>Agende sua avaliação</h2>
-    <p>Entre em contato e receba atendimento personalizado.</p>
-
-    <a href="https://wa.me/5544991212105" class="btn-primary">
-      WhatsApp
-    </a>
-
+    <a href="https://wa.me/5544991212105" class="btn-main">WhatsApp</a>
   </div>
 </section>
 
-</main>
-
-<footer class="footer">
-  <div class="container">
-    <p>© 2026 SEU NOME</p>
-  </div>
-</footer>
+<script src="script.js"></script>
 
 </body>
 </html>
